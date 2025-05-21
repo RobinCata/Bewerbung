@@ -5,12 +5,13 @@ import { HostListener, Component, ElementRef, ViewChild,} from '@angular/core';
 
 
 @Component({
-  selector: 'app-startseite',
   standalone: true,
-  imports: [CommonModule],
+  selector: 'app-startseite',
   templateUrl: './startseite.component.html',
-  styleUrls: ['./startseite.component.css']
+  styleUrls: ['./startseite.component.css'],
+  imports: [CommonModule]
 })
+
 export class StartseiteComponent {
    showLinks = false;
 
