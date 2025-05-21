@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: rgb(20, 20, 20);
+    color: white;
+    background-image: radial-gradient(#17701e 0.35px, transparent 1px);
+    background-size: 3rem 3rem;
+  }
+  html{
+    scroll-behavior: smooth;
+  }

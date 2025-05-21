@@ -1,0 +1,212 @@
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-metro.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <header>
+  <nav class="topnav">
+    <div>
+      <a routerLink="/home" routerLinkActive="active" class="brand" id="1">Bewerbungswebsite</a>
+      <div class="line"></div>
+    </div>
+    <div
+      #burgerIcon
+      class="icon"
+      (click)="toggleMenu()"
+      [class.open]="showLinks">
+      <i class="fa fa-bars"></i>
+    </div>
+  </nav>
+</header>
+
+<div class="links" #menuLinks [class.visible]="showLinks">
+  <a href="#1" class="link">📖Über mich</a><br>
+  <a href="#2" class="link">🕵️Interessen</a><br>
+  <a href="#3" class="link">💪Skills</a><br>
+  <a href="#4" class="link">🏫 Schultage</a><br>
+  <a href="#5" class="link">🛠️ Projekte</a>
+</div>
+  <div class="inhalt">
+    <div class="uberMich" >
+      <p class="uberText">Hallo, ich bin Robin
+        Ich bin am Ende von meinem 1. Projekt als Informatiker in Applikationsentwicklung und suche nun mein 2. Projekt. Warum ich? Ich habe die Grundlagen in Angular und Java solide erarbeitet und möchte mein können unter Beweis stellen!
+      </p>
+      <div class="line2"></div>
+    </div>
+<img src="/image/SF_Cataldo_Robin_Cruz_02582-1x1.jpg" alt="" class="Foto" >
+  </div>
+  <h1 id="2">🕵️Interessen</h1>
+  <div class="interessen" >
+    Ich interessiere mich dafür, wie Software aufgebaut ist 
+    und wie Webseiten nicht nur aussehen, sondern auch im Hintergrund funktionieren.
+    Bisher konnte ich erste Erfahrungen in Frontend und Backend in Projekten und privat sammeln, 
+    was mein Interesse am Programmieren weiter erhöht hat.
+    Neben der Informatik gehören Fussball (mein Lieblingsverein ist der FC Barcelona), 
+    Zeit mit Freunden, Gaming und Filme und Serien zu meinen grössten Hobbys.
+    Mein Traum ist es, in der Zukunft etwas in Richtung künstlicher Intelligenz oder Cybersecurity zu machen.
+  </div>
+  <h1 class="ayri" id="3">💪Meine Skills</h1>
+  <div class="skills">
+    <div (click)="toggle()" class="diagrammall1" >
+      <h3 class="titel">Frontend</h3>
+      <div class="diagramm">
+        <div class="w3-white w3-round-xlarge" style="width:60%;">
+          <div class="w3-container w3-metro-dark-green w3-round-xlarge" style="height:24px;width:90%"></div>
+        </div>  
+        <div class="pfeil" [class.rotate]="isOpen">{{ isOpen ? '▲' : '▲' }}</div>
+      </div>
+    </div>
+    <div [class.show]="isOpen" class="beispiel">
+      <br>
+      <div class="test">
+        <div class="card">
+          <h2>🏗️ HTML</h2>
+          <p>Ich arbeite sehr gern an Webseiten und hab schon über ein Dutzend Projekte mit HTML umgesetzt und dabei immer einen Blick fürs Detail behalten.</p>
+          <br>
+          <br>
+          <div class="diagramm">
+            <div class="w3-white w3-round-xlarge" style="width:80%;">
+              <div class="w3-container w3-metro-dark-green w3-round-xlarge" style="height:24px;width:80%"></div>
+            </div>
+          </div>    
+        </div>
+        <div class="card">
+          <h2> 🎨 CSS</h2>
+          <p> Ich liebe es Webseiten mit CSS zu stylen, sei es mit geschmeidigen Übergängen oder kreativen Flex-Layouts. In mehreren Webseiten habe ich schon für ein ansprechendes Design gesorgt</p>
+          <br>
+          <div class="diagramm">
+            <div class="w3-white w3-round-xlarge" style="width:80%;">
+              <div class="w3-container w3-metro-dark-green w3-round-xlarge" style="height:24px;width:90%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h2> 📜 Javascript</h2>
+          <p>Mit Javascript habe ich in meinen Projekt schon erfahrung gesammelt. Ob dynamische Menüs oder kleine Animationen, in meinem habe ich Nutzererlebnisse mit meinen Code verbessert.</p>
+          <br>
+          <div class="diagramm">
+            <div class="w3-white w3-round-xlarge" style="width:80%;">
+            <div class="w3-container w3-metro-dark-green w3-round-xlarge" style="height:24px;width:35%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div (click)="toggle2()" class="diagrammall">
+      <h3 class="titel">Backend</h3>
+      <div class="diagramm">
+        <div class="w3-white w3-round-xlarge" style="width:60%;">
+          <div class="w3-container w3-metro-dark-green w3-round-xlarge" style="height:24px;width:60%"></div>
+        </div>  
+        <div class="pfeil" [class.rotate]="isOpen2">{{ isOpen2 ? '▲' : '▲' }}</div>
+      </div>
+    </div>
+    <div [class.show]="isOpen2" class="beispiel">
+      <br>
+      <div class="test">
+        <div class="card">
+          <h2>☕ Java</h2>
+          <p>Ich habe Java Streams genutzt um Daten aus Jsons und anderen Anwendungen zu Sortieren und Mappen, dass hab ich auch schon bei Projekten in Teams angewendet</p>
+          <br>
+          <div class="diagramm">
+            <div class="w3-white w3-round-xlarge" style="width:80%;">
+              <div class="w3-container w3-metro-dark-green w3-round-xlarge" style="height:24px;width:60%"></div>
+            </div>
+          </div>    
+        </div>
+        <div class="card">
+          <h2> 🌀 NoteJS</h2>
+          <p> Ich habe im ÜK mit NodeJS eine unvollständige Datenbank fertiggestellt und REST-APIs entwickelt. Dabei habe ich auch andere Anwendungen gebraucht um Daten gut zu Strukturieren</p>
+          <br>
+          <div class="diagramm">
+            <div class="w3-white w3-round-xlarge" style="width:80%;">
+              <div class="w3-container w3-metro-dark-green w3-round-xlarge" style="height:24px;width:40%"></div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div (click)="toggle3()" class="diagrammall3">
+      <h3 class="titel">Sonstiges</h3>
+        <div class="diagramm">
+          <div class="w3-white w3-round-xlarge" style="width:60%;">
+            <div class="w3-container w3-metro-dark-green w3-round-xlarge" style="height:24px;width:68%"></div>
+          </div>  
+        <div class="pfeil" [class.rotate]="isOpen3">{{ isOpen3 ? '▲' : '▲' }}</div>
+      </div>
+    </div>
+    <div [class.show]="isOpen3" class="beispiel">
+      <br>
+      <div class="test">
+        <div class="card">
+            <h2>⚡ PowerShell</h2>
+            <p>Ich habe hauptsächlich mit dem Automatisierungsteil von PowerShell gearbeitet. In der Schule haben wir im Team eine Desktop-Applikation entwickelt.</p>
+            <br>
+            <div class="diagramm">
+              <div class="w3-white w3-round-xlarge" style="width:80%;">
+                <div class="w3-container w3-metro-dark-green w3-round-xlarge" style="height:24px;width:45%"></div>
+              </div>
+            </div>    
+          </div>
+          <div class="card">
+            <h2>💽 Datenbanken</h2>
+            <p> Ich weiss wie ich Datenbanken in Angular implementieren kann. Im ÜK habe ich Datenmodelle erstellt und die Datenbank mit vielen Befehl abgefragt.</p>
+            <br>
+            <div class="diagramm">
+              <div class="w3-white w3-round-xlarge" style="width:80%;">
+                <div class="w3-container w3-metro-dark-green w3-round-xlarge" style="height:24px;width:70%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h2>🔌 API</h2>
+            <p> Ich habe API's schon in viele Meiner Projekte implementiert und weiss wie ich Endpunkte definieren kann. Ich kann eine API mit Java erstellen</p>
+            <br>
+            <div class="diagramm">
+              <div class="w3-white w3-round-xlarge" style="width:80%;">
+                <div class="w3-container w3-metro-dark-green w3-round-xlarge" style="height:24px;width:40%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h2>🐢 Git</h2>
+            <p> Ich setze Github und Gitlab fast täglich für meine Projekte. Ich habe schon mit Branches gearbeitet und weiss wie ich Pipelines fixen kann.</p>
+            <br>
+            <div class="diagramm">
+              <div class="w3-white w3-round-xlarge" style="width:80%;">
+                <div class="w3-container w3-metro-dark-green w3-round-xlarge" style="height:24px;width:65%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="line3"></div>
+  <h1 id="4">🏫 Schultage</h1>
+  
+  <br>
+  <br>
+  <div class="Schultage">
+    <div class="Schultag"> MO </div>
+    <div class="Schultag"> DI </div>
+    <div class="tag"> MI </div>
+    <div class="tag"> DO </div>
+    <div class="tag"> FR </div>
+  </div>
+  <div class="line3"></div>
+  <br>
+  <br>
+  <h1 id="5">🛠️ Projekte</h1>
+  <div class="scroll-container">
+  <div class="titeln">
+  <h2><span style="margin-right: 35rem; margin-left: 18rem;">Flaggenquiz Website mit API</span><span>Filmwebsite mit API</span><span style=" margin-left: 38rem;">Pflanzengiessen Erinnerungsskript</span><span style=" margin-left: 35rem;">Datenbank für Kursanbieter mit Rollen</span></h2>
+  </div>
+  <img src="image/Bild.png" alt="">
+  <img src="image/Screenshot 2025-05-14 115524.png" alt="">
+  <img src="image/Bewerbung-Website_Angualr\public\image\Screenshot 2025-05-14 132909.png" alt="">
+  <img src="image/Bild3.png" alt="">
+</div>
+  <footer>
+    <div class="linkedin" onclick=" window.open('https://www.linkedin.com/in/robin-cataldo-3234b9273/')">LinkedIn</div>
+  </footer>
